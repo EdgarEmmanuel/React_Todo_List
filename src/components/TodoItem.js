@@ -25,7 +25,9 @@ class TodoItem extends React.Component{
                 <input  type="checkbox" onChange={this.props.change.bind(this,this.props.data.id)} value=""/>{''}
                 <p>
                 Work : {this.props.data.title}  <br/>
-                </p>
+                </p>{''}
+                <button onClick={this.props.delete.bind(this,this.props.data.id)}
+                 className="btn btn-primary"><i className="fa fa-trash" aria-hidden="true"></i></button>
             </h3>
         );
     }
