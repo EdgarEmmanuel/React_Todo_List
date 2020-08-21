@@ -1,0 +1,10 @@
+form{
+    margin-top:40px;
+    margin-left:450px;
+   margin-bottom:40px;
+}
+
+form input{
+    width:300px;
+    border-radius: 10px;
+}
