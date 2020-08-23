@@ -5,22 +5,18 @@ import Todos from './components/Todos';
 import Header from '../src/layout/header';
 import Form from '../src/components/form';
 import About from '../src/pages/about'
-
+import Axios from 'axios';
 
 class App extends React.Component{
   state={
-    todos: [
-      {
-        id:1,
-        title:"Go Church",
-        completed:true
-      },
-      {
-        id:2,
-        title:"Go Simplon",
-        completed:true
-      },
-    ]
+    todos: []
+  }
+
+
+  componentDidMount(){
+    Axios.get('https://jsonplaceholder.typicode.com/todos?_limit=2').then((res)=>{
+      this.setState({todos:res.data});
+    })
   }
 
   //================================= modify the Todo 
