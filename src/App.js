@@ -10,16 +10,11 @@ class App extends React.Component{
     todos: [
       {
         id:1,
-        title:"Read Bible",
-        completed:false
-      },
-      {
-        id:2,
         title:"Go Church",
         completed:true
       },
       {
-        id:3,
+        id:2,
         title:"Go Simplon",
         completed:true
       },
@@ -43,12 +38,24 @@ class App extends React.Component{
     //var array = this.state.todos.filter(todo => todo.id!==id );
     this.setState({todos: this.state.todos.filter(todo => todo.id!==id )});
   }
+
+  //==================== add Todo 
+
+  addTodo = (title) => {
+    const idE = this.state.todos.length+1;
+    var obj={
+      id:idE,
+      title:title,
+      completed:false
+    };
+    this.setState({todos:[...this.state.todos,obj]});
+  }
  
   render(){
     return(
       <div className="App">
           <Header/>
-          <Form/>
+          <Form childs={this.addTodo} />
           <Todos del={this.delete} change={this.modify} data={this.state.todos} />
       </div>
     )
