@@ -1,8 +1,10 @@
 import React from 'react';
+import {BrowserRouter,Route} from 'react-router-dom';
 import './App.css';
 import Todos from './components/Todos';
 import Header from '../src/layout/header';
 import Form from '../src/components/form';
+import About from '../src/pages/about'
 
 
 class App extends React.Component{
@@ -53,11 +55,27 @@ class App extends React.Component{
  
   render(){
     return(
-      <div className="App">
-          <Header/>
-          <Form childs={this.addTodo} />
-          <Todos del={this.delete} change={this.modify} data={this.state.todos} />
-      </div>
+      <BrowserRouter>
+          <div className="App">
+              <Header/>
+
+
+              <Route exact path="/" render={props=>(
+                <React.Fragment>
+                    <Form childs={this.addTodo} />
+                    <Todos del={this.delete} change={this.modify} data={this.state.todos} />
+                </React.Fragment>
+              )} />
+
+              
+              <Route path="/about" render={props=>(
+                <React.Fragment>
+                        <About/>
+                </React.Fragment>
+                )}  />
+
+          </div>
+      </BrowserRouter>
     )
   }
 

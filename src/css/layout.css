@@ -5,3 +5,20 @@ header{
     color:white;
     font-weight:bold;
 }
+
+header a{
+    margin:0px 20px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+header a:hover{
+    margin:0px 20px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    text-decoration:none;
+}

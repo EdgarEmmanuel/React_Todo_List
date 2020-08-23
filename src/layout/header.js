@@ -5,6 +5,12 @@ function Header(){
     return(
         <header>
             <h1>TODO | APP</h1>
+            <a href="/about">
+            ABOUT 
+            </a> | 
+            <a href="/">
+            HOME
+            </a>
         </header>
     )
 }
