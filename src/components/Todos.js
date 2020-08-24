@@ -7,7 +7,8 @@ import PropTypes from 'prop-types';
 class Todos extends React.Component{
     render(){
         return this.props.data.map((todo,id) =>{
-            return <TodoItem delete={this.props.del} key={id} change={this.props.change} data={todo} />
+            return <TodoItem delete={this.props.del} key={id} 
+            change={this.props.change} data={todo} />
         });
     }
 }
