@@ -32,7 +32,6 @@ class App extends React.Component{
   //========================= delete the Todo 
 
   delete = (id) =>{
-
     //var array = this.state.todos.filter(todo => todo.id!==id );
     this.setState({todos: this.state.todos.filter(todo => todo.id!==id )});
   }

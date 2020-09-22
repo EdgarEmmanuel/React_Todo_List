@@ -23,7 +23,8 @@ class Form extends React.Component{
     render(){
         return(
             <form onSubmit={this.OnSub}>
-                <input onChange={this.onchange} type="text" name="title" value={this.state.title} placeholder="text" className="from-control" />
+                <input onChange={this.onchange} type="text" name="title"
+                 value={this.state.title} placeholder="text" className="from-control" />
                 <button className="btn btn-primary">SUBMIT</button>
             </form>
         )

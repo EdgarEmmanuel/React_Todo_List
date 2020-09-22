@@ -10,11 +10,11 @@ class TodoItem extends React.Component{
            }
            return a;
        }else{
-           const a ={
+           const a ={ 
                backgroundColor: 'grey',
            }
            return a;
-       }
+       } 
        
     }
 
