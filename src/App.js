@@ -6,6 +6,7 @@ import Header from '../src/layout/header';
 import Form from '../src/components/form';
 import About from '../src/pages/about'
 import Axios from 'axios';
+import Test from './components/test';
 
 class App extends React.Component{
   state={
@@ -59,6 +60,7 @@ class App extends React.Component{
                 <React.Fragment>
                     <Form childs={this.addTodo} />
                     <Todos del={this.delete} change={this.modify} data={this.state.todos} />
+                    <Test/>
                 </React.Fragment>
               )} />
 
